@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int Round;
+    public int Lives;
+    public int Money;
     public Map CurrentMap;
     public Heart RedHeart;
     public Heart BlueHeart;

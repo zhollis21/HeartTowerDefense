@@ -31,6 +31,7 @@ public class Heart : MonoBehaviour
 
             if (_pointIndex == _mapPoints.Count)
             {
+                GameManager.Instance.Lives--;
                 Destroy(this.gameObject);
             }
         }
