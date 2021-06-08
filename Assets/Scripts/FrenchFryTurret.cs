@@ -25,18 +25,17 @@ public class FrenchFryTurret : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        // Determine which direction to rotate towards
-        Vector3 targetDirection = other.transform.position - transform.position;
+        RotateTowards(other.transform.position);
+    }
 
-        // Rotate the forward vector towards the target direction
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, 360, 0.0f);
-
-        // Draw a ray pointing at our target in
-        Debug.DrawRay(transform.position, newDirection, Color.red);
-
-        // Calculate a rotation a step closer to the target and applies rotation to this object
-        transform.rotation = Quaternion.LookRotation(newDirection);
+    private void RotateTowards(Vector2 target)
+    {
+        var offset = -90f;
+        Vector2 direction = target - (Vector2)transform.position;
+        direction.Normalize();
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
     }
 }
