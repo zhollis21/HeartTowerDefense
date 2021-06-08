@@ -44,6 +44,9 @@ TagManager:
   - name: Map
     uniqueID: 4167445889
     locked: 0
+  - name: Tower
+    uniqueID: 692061005
+    locked: 0
   - name: Heart
     uniqueID: 1096380005
     locked: 0
