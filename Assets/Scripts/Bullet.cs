@@ -25,6 +25,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // After the bullet goes so far, we destory it
         if (Vector2.Distance(_startPoint, transform.position) > Range)
         {
             Destroy(gameObject);

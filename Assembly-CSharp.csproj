@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HeartSpriteManager.cs" />
+    <Compile Include="Assets\Scripts\WaveManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
