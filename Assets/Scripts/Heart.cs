@@ -36,4 +36,14 @@ public class Heart : MonoBehaviour
             }
         }
     }
+
+    void TakeDamage(int amount)
+    {
+        HitPoints -= amount;
+
+        if (HitPoints < 1)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

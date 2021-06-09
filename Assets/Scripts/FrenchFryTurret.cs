@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FrenchFryTurret : MonoBehaviour
 {
     public int Range = 5;
+    public Bullet FrenchFryBullet;
+    public float AttackSpeed = 1;
 
     private Transform _radiusTransform;
     private CircleCollider2D _radiusCollider;
+    private readonly List<GameObject> _targets = new List<GameObject>();
+    private float _timeOfLastAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +27,33 @@ public class FrenchFryTurret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        var target = _targets.FirstOrDefault();
+
+        if (target != null)
+        {
+            Attack(target);
+        }
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        RotateTowards(other.transform.position);
+        _targets.Add(other.gameObject);
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        _targets.Remove(other.gameObject);
+    }
+
+    private void Attack(GameObject target)
+    {
+        if ((Time.time - _timeOfLastAttack) > AttackSpeed)
+        {
+            _timeOfLastAttack = Time.time;
+
+            RotateTowards(target.transform.position);
+            Instantiate(FrenchFryBullet, transform.position, transform.rotation);
+        }
     }
 
     private void RotateTowards(Vector2 target)
