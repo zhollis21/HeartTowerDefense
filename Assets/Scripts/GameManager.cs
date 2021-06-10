@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Heart BlueHeart;
     public static GameManager Instance;
 
+    public const int MAX_ROUND = 5;
+
     void Awake()
     {
         Instance = this;
@@ -26,9 +28,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Round < MAX_ROUND && !RoundManager.Instance.IsRoundPlaying())
         {
-            var newHeart = Instantiate(RedHeart);
+            Round++;
+            RoundManager.Instance.PlayRound(Round);
         }
     }
 }

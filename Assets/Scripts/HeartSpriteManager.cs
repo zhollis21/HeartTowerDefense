@@ -27,17 +27,17 @@ public class HeartSpriteManager : MonoBehaviour
         
     }
 
-    public Sprite GetHeartSprite(Heart.HeartType heartType)
+    public Sprite GetHeartSprite(Heart.Type heartType)
     {
         switch (heartType)
         {
-            case Heart.HeartType.Red:
+            case Heart.Type.Red:
                 return RedHeartSprite;
-            case Heart.HeartType.Blue:
+            case Heart.Type.Blue:
                 return BlueHeartSprite;
-            case Heart.HeartType.Green:
+            case Heart.Type.Green:
                 return GreenHeartSprite;
-            case Heart.HeartType.Yellow:
+            case Heart.Type.Yellow:
                 return YellowHeartSprite;
         }
 

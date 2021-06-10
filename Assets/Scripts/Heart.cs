@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour
 {
-    public enum HeartType { Red, Blue, Green, Yellow }
+    public enum Type { Red, Blue, Green, Yellow }
 
-    public HeartType Type;
-    public List<Sprite> HeartSprites;
+    public Type HeartType;
 
     private int _hitPoints;
     private float _speed;
@@ -54,15 +53,15 @@ public class Heart : MonoBehaviour
 
     private void SpawnHearts(int carryOverDamage)
     {
-        switch (Type)
+        switch (HeartType)
         {
-            case HeartType.Red:
+            case Type.Red:
                 Destroy(gameObject);
                 break;
-            case HeartType.Blue:
-            case HeartType.Green:
-            case HeartType.Yellow:
-                Type -= 1;
+            case Type.Blue:
+            case Type.Green:
+            case Type.Yellow:
+                HeartType -= 1;
                 SetHeartStatsByCurrentType();
                 break;
         }
@@ -75,34 +74,34 @@ public class Heart : MonoBehaviour
 
     private void SetHeartStatsByCurrentType()
     {
-        switch (Type)
+        switch (HeartType)
         {
-            case HeartType.Red:
+            case Type.Red:
                 _speed = 1;
                 _hitPoints = 1;
                 _redHeartEquivalent = 1;
-                _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(Type);
+                _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(HeartType);
                 break;
 
-            case HeartType.Blue:
+            case Type.Blue:
                 _speed = 1.4f;
                 _hitPoints = 1;
                 _redHeartEquivalent = 2;
-                _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(Type);
+                _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(HeartType);
                 break;
 
-            case HeartType.Green:
+            case Type.Green:
                 _speed = 1.8f;
                 _hitPoints = 1;
                 _redHeartEquivalent = 3;
-                _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(Type);
+                _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(HeartType);
                 break;
 
-            case HeartType.Yellow:
+            case Type.Yellow:
                 _speed = 3.2f;
                 _hitPoints = 1;
                 _redHeartEquivalent = 4;
-                _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(Type);
+                _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(HeartType);
                 break;
         }
     }
