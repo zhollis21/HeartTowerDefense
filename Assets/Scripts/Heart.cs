@@ -99,7 +99,7 @@ public class Heart : MonoBehaviour
                 break;
 
             case Type.Yellow:
-                _speed = 3.2f;
+                _speed = 2.7f;
                 _hitPoints = 1;
                 _redHeartEquivalent = 4;
                 _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(HeartType);

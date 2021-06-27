@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public Map CurrentMap;
     public static GameManager Instance;
 
-    public const int MAX_ROUND = 10;
+    public const int MAX_ROUND = 15;
 
     void Awake()
     {
