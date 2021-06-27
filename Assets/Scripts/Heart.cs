@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour
 {
-    public enum Type { Red, Blue, Green, Yellow }
+    public enum Type { Red, Blue, Green, Yellow, Pink }
 
     public Type HeartType;
 
@@ -61,6 +61,7 @@ public class Heart : MonoBehaviour
             case Type.Blue:
             case Type.Green:
             case Type.Yellow:
+            case Type.Pink:
                 HeartType -= 1;
                 SetHeartStatsByCurrentType();
                 break;
@@ -102,6 +103,17 @@ public class Heart : MonoBehaviour
                 _hitPoints = 1;
                 _redHeartEquivalent = 4;
                 _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(HeartType);
+                break;
+
+            case Type.Pink:
+                _speed = 3.5f;
+                _hitPoints = 1;
+                _redHeartEquivalent = 5;
+                _spriteRenderer.sprite = HeartSpriteManager.Instance.GetHeartSprite(HeartType);
+                break;
+
+            default:
+                Debug.LogError($"No stats for heart type of {HeartType}");
                 break;
         }
     }

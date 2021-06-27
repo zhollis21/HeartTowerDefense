@@ -698,6 +698,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 644672148, guid: 6a51d808edbf23e4c84ba5bf32d97b80, type: 3}
+      propertyPath: PinkHeart
+      value: 
+      objectReference: {fileID: 4608804396941727672, guid: 250c45dfbff9fdc41bd39fdad33ce7f3, type: 3}
+    - target: {fileID: 1671572870912330424, guid: 6a51d808edbf23e4c84ba5bf32d97b80, type: 3}
+      propertyPath: PinkHeartSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3d47acc6a23d1724ba83d59c74f89b29, type: 3}
     - target: {fileID: 2120119218472692352, guid: 6a51d808edbf23e4c84ba5bf32d97b80, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -765,11 +773,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4001002418696732737, guid: 13d17d054804f9845b573c28115ad147, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.5
+      value: 5.4
       objectReference: {fileID: 0}
     - target: {fileID: 4001002418696732737, guid: 13d17d054804f9845b573c28115ad147, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 4001002418696732737, guid: 13d17d054804f9845b573c28115ad147, type: 3}
       propertyPath: m_LocalPosition.z
