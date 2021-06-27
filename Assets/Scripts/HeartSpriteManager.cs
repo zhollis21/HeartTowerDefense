@@ -9,6 +9,7 @@ public class HeartSpriteManager : MonoBehaviour
     public Sprite BlueHeartSprite;
     public Sprite GreenHeartSprite;
     public Sprite YellowHeartSprite;
+    public Sprite PinkHeartSprite;
 
     void Awake()
     {
@@ -39,9 +40,11 @@ public class HeartSpriteManager : MonoBehaviour
                 return GreenHeartSprite;
             case Heart.Type.Yellow:
                 return YellowHeartSprite;
+            case Heart.Type.Pink:
+                return PinkHeartSprite;
+            default:
+                Debug.LogError($"Sprite not found for {heartType}");
+                return null;
         }
-
-        Debug.LogError($"Sprite not found for {heartType}");
-        return null;
     }
 }

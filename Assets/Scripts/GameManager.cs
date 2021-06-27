@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public Heart BlueHeart;
     public static GameManager Instance;
 
-    public const int MAX_ROUND = 5;
+    public const int MAX_ROUND = 10;
 
     void Awake()
     {

@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   FrenchFryBullet: {fileID: 78913288520480255, guid: b28751fc7bb5a7d4d9af30976782969e, type: 3}
-  AttackSpeed: 0.5
+  AttackSpeed: 1
 --- !u!58 &4001002418696732738
 CircleCollider2D:
   m_ObjectHideFlags: 0
