@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
-  Pierce: 1
+  Pierce: 2
   Speed: 31
   Range: 7
 --- !u!70 &2637236458137716424

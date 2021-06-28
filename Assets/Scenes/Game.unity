@@ -756,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2120119218472692355, guid: 6a51d808edbf23e4c84ba5bf32d97b80, type: 3}
       propertyPath: Round
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2120119218472692355, guid: 6a51d808edbf23e4c84ba5bf32d97b80, type: 3}
       propertyPath: CurrentMap
